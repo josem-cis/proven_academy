@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+/*
+	Project 2-2
+    	Author: Jose Martinez
+    	Date: 7/18/26
+
+    	Filename: jm_soccer.css
+*/
+
+/* Typographic Style */
+* {
+    	margin: 0;
+    	padding: 0;
+    	box-sizing: border-box;
+}
+
+/* Grid Styles for Page Body */
+
+body.container {
+   	display: grid;
+    	grid-template-columns: repeat(3, 1fr);
+    	grid-template-rows: auto auto auto auto 1fr;
+    	grid-template-areas:
+        	"header header header"
+        	"nav nav nav"
+		"h1 h1 h1"
+        	"program1 program2 program3"
+        	"footer footer footer";
+    	gap: 20px;
+    	width: 90%;
+    	margin: 20px auto;
+    	font-family: 'Times New Roman', Times, sans-serif;
+	background-color: rgb(240, 207, 171);
+}
+
+/* Header */
+header {
+    	grid-area: header;
+    	text-align: center;
+}
+
+header img {
+    	max-width: 100%;
+    	height: auto;
+}
+
+/* Navigation */
+
+nav {
+    	grid-area: nav;
+    	background-color: rgb(217, 35, 8);
+}
+
+nav ul {
+    	display: grid;
+    	grid-template-columns: repeat(6, 1fr);
+    	list-style: none;
+    	padding: 12px;
+    	margin: 0;
+    	text-align: center;
+}
+
+nav a {
+    	color: white;
+    	text-decoration: none;
+    	font-weight: bold;
+}
+
+nav a:hover {
+    	text-decoration: underline;
+}
+
+/* Section Layout */
+section {
+    	display: contents;
+}
+
+/* Welcome Heading */
+h1 {
+    	grid-column: 1 / 4;
+    	text-align: center;
+    	margin-bottom: 15px;
+    	font-size: 2em;
+}
+
+/* Program Boxes */
+
+section article:nth-of-type(1) {
+    	grid-area: program1;
+}
+
+section article:nth-of-type(2) {
+    	grid-area: program2;
+}
+
+section article:nth-of-type(3) {
+    	grid-area: program3;
+}
+
+article {
+    	padding: 20px;
+   	border: 2px solid;
+    	border-radius: 8px;
+    	background-color: rgb(217, 35, 8);
+	color: white;
+	text-align: center;
+}
+
+article h2 {
+    	margin-bottom: 10px;
+	text-align: center;
+}
+
+/* Footer */
+
+footer {
+	display: grid;
+	grid-column: 1/-1;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+    	text-align: center;
+    	padding: 20px;
+    	background-color: rgb(217, 35, 8);
+    	color: white;
+}
+
+footer section {
+	display: block;
+	padding: 15px;
+}
