@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 /*
-	Project 2-3
+	Project 2-2
     	Author: Jose Martinez
-    	Date: 7/24/26
+    	Date: 7/18/26
 
     	Filename: jm_soccer.css
 */
@@ -201,6 +201,26 @@ div.gallery-item textarea {
     	resize: none;
     	margin-top: 10px;
 }
+
+/* Accordion */
+
+.accordion {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.accordion-button {
+    background-color: rgb(217, 35, 8);
+    color: Black;
+    font-weight: bold;
+    font-size: .75em;
+}
+
+.accordion-body {
+    background-color: white;
+    color: black;
+}
+
 
 /* Footer */
 
