@@ -25,6 +25,7 @@ body.container {
         	"header header header"
         	"nav nav nav"
 		"h1 h1 h1"
+		"striking striking striking"
         	"program1 program2 program3"
         	"footer footer footer";
     	gap: 20px;
@@ -84,6 +85,15 @@ h1 {
     	font-size: 2em;
 }
 
+/* Header Image */
+
+.striking-image {
+	grid-column: 1 / -1;
+    	width: 100%;
+    	height: 400px;      
+    	object-fit: cover;  
+}
+
 /* Program Boxes */
 
 section article:nth-of-type(1) {
@@ -117,7 +127,7 @@ article h2 {
 div.formRow {
 	display: flex;
 	flex-flow: row wrap;
-	margin: 7px 0px;
+	margin: 5px 0px;
 }
 
 div.formRow > * {
@@ -125,18 +135,23 @@ div.formRow > * {
 }
 
 form#contact {
+	grid-column: 1 / -1;
 	display: flex;
 	flex-flow: row wrap;
+	width: 75%;
+	margin: auto;
 }
 
 form#contact > fieldset {
 	background-color: rgb(217, 35, 8);
 	border-radius: 20px;
 	flex: 1 1 300px;
-	font-size: 0.95em;
+	font-size: 1em;
 	padding: 10px;
 	margin: 10px;
 	color: white;
+	text-align: center;
+	font-weight: bold;
 }
 
 textarea {
@@ -163,29 +178,29 @@ input:focus, select:focus, textarea:focus {
 /* Testimonials */
 
 div.gallery {
-    	display: flex;
-    	flex-wrap: wrap;
-    	justify-content: center;
-    	gap: 20px;
-    	width: 90%;
-    	margin: 20px auto;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin: 20px auto;
 }
 
 div.gallery-item {
-    	width: 45%;
-    	min-height: 500px;
-    	border: 1px solid #ccc;
-    	padding: 10px;
-    	text-align: center;
-    	background-color: white;
-}
-div.gallery-item:hover {
-    	border: 1px solid #777;
+    width: calc(50% - 10px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
 }
 
 div.gallery-item img {
-    	width: 100%;
-    	height: 450px;
+    width: 100%;
+    height: 500px;
+}
+div.gallery-item:hover {
+    	border: 1px solid #777;
 }
 
 div.gallery-item div.desc {
@@ -211,7 +226,7 @@ div.gallery-item textarea {
 
 .accordion-button {
     background-color: rgb(217, 35, 8);
-    color: Black;
+    color: white;
     font-weight: bold;
     font-size: .75em;
 }
@@ -221,7 +236,18 @@ div.gallery-item textarea {
     color: black;
 }
 
+/* Card Group */
 
+.card-group {
+	width: 100%;
+	grid-column: 1/-1;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
 /* Footer */
 
 footer {
